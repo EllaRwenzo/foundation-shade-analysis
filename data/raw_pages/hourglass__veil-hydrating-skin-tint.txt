@@ -1,0 +1,23 @@
+BRAND|Hourglass
+PRODUCT|Veil Hydrating Skin Tint
+URL|https://www.hourglasscosmetics.com/products/veil-hydrating-skin-tint
+METHOD|css_swatch_color
+N|18
+1 - Fairest with cool undertones|F1C9AD
+2 - Very fair with warm undertones|F1C5A6
+3 - Fair with neutral undertones|DDBFA7
+4 - Fair with cool undertones|F2BFA1
+5 - Light with warm undertones|DFB9A8
+6 - Light with cool undertones|CDA890
+7 - Light medium with warm undertones|CEA688
+8 - Light medium with cool undertones|D9AC96
+9 - Medium with warm undertones|EBC59F
+10 - Medium with neutral undertones|D5A285
+11 - Medium deep with warm undertones|BF9375
+12 - Medium deep with neutral undertones|C58B69
+13 - Medium deep with neutral undertones|AD7D58
+14 - Medium deep with neutral warm undertones|AD7D58
+15 - Medium deep with warm undertones|A8714B
+16 - Deep with cool undertones|A8724E
+17 - Deep with warm undertones|AC6D49
+18 - Deep with neutral undertones|6A3D2E

@@ -1,0 +1,17 @@
+BRAND|L'Oreal Paris
+PRODUCT|True Match Hyaluron Tinted Balm Foundation
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/true-match-hyaluron-tinted-balm-foundation
+METHOD|css_swatch_color
+N|12
+2 rosy light|F3C7AE
+2.5 neutral light|EFC5A1
+3 light|E6B991
+4 medium light|E2AB82
+5 medium|D09F81
+6 medium tan|DA9A6B
+7 tan|B57643
+8 tan deep|AD7051
+9 deep|955A3D
+10 neutral deep|834834
+11 very deep|683C2B
+1 very light|F7D7BE

@@ -1,0 +1,10 @@
+BRAND|Huda Beauty
+PRODUCT|#FauxFilter Luminous Matte Foundation
+URL|https://hudabeauty.com/en-us/products/fauxfilter-luminous-matte-foundation-hb00509m
+METHOD|css_swatch_color
+EXCLUDED_REASON|Clearance: product data lists 39 shades but only 1 is in stock and the page shows just 4 leftover shades (Easy Blur replaced it)
+N|4
+Vanilla 120B|FBDCC6
+Shortbread 200B|F8CFB6
+Peaches N Cream 245B|F5AF8A
+Cheesecake 250G|E7A280

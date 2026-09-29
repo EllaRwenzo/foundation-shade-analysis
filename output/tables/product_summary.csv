@@ -1,0 +1,47 @@
+brand,product,product_type,shades,lightest,deepest,pct_in_deeper_half_of_own_range,median_gap_lighter_half,median_gap_deeper_half,gaps_lighter,gaps_deeper
+Charlotte Tilbury,Airbrush Flawless Foundation,Foundation,44,91.62,14.76,0.22727272727272727,0.79,4.11,33,10
+Charlotte Tilbury,Charlotte's Beautiful Skin Foundation,Foundation,30,88.82,32.62,0.26666666666666666,1.31,5.164999999999999,21,8
+Charlotte Tilbury,Hollywood Flawless Filter,Glow filter,12,93.5,38.13,0.25,2.645,10.37,8,3
+Charlotte Tilbury,Unreal Skin Sheer Glow Tint Hydrating Foundation Stick,Foundation,20,85.93,20.41,0.3,1.79,6.24,14,5
+Hourglass,Ambient Soft Glow Foundation,Foundation,32,85.47,26.23,0.375,0.92,1.785,19,12
+Hourglass,Illusion Luminous Glow Foundation SPF 30,Foundation,32,83.96,29.01,0.28125,1.07,2.475,23,8
+Hourglass,Vanish Seamless Finish Foundation Stick,Foundation,33,91.17,25.01,0.3333333333333333,1.01,3.31,21,11
+Hourglass,Veil Hydrating Skin Tint,Skin tint,18,83.7,30.88,0.3333333333333333,1.4100000000000001,0.51,12,5
+Huda Beauty,Easy Blur Natural Airbrush Foundation with Niacinamide,Foundation,38,92.07,11.22,0.3157894736842105,0.9949999999999999,3.42,26,11
+L'Oreal Paris,Age Perfect Radiant Serum Foundation SPF 50,Foundation,30,89.28,18.88,0.3,1.34,3.6149999999999998,21,8
+L'Oreal Paris,Infallible 32H Fresh Wear Foundation,Foundation,40,93.2,13.73,0.2,1.01,3.9450000000000003,31,8
+L'Oreal Paris,Infallible Cushion Foundation,Foundation,20,93.06,20.96,0.25,1.79,8.125,15,4
+L'Oreal Paris,Infallible Pro-Glow Foundation,Foundation,12,84,41.46,0.25,1.67,10.450000000000001,9,2
+L'Oreal Paris,Infallible Pro-Matte Foundation,Foundation,22,89.71,18.47,0.18181818181818182,1.06,10.26,17,4
+L'Oreal Paris,Infallible Skin Ink 2-in-1 Foundation Concealer,Foundation,22,90.06,19,0.36363636363636365,1.81,4.39,13,8
+L'Oreal Paris,Lumi Le Glow Skin Tint,Skin tint,16,87.48,16.91,0.3125,3.0700000000000003,7.37,10,5
+L'Oreal Paris,True Match Hyaluron Tinted Balm Foundation,Foundation,12,88.01,30.28,0.4166666666666667,4.09,7.005000000000001,7,4
+L'Oreal Paris,True Match Lumi Healthy Luminous Makeup,Foundation,15,87.64,49.71,0.4666666666666667,1.635,0.69,8,6
+L'Oreal Paris,True Match Super-Blendable Foundation,Foundation,47,92.59,7.53,0.2765957446808511,1.03,2.49,33,13
+L'Oreal Paris,Visible Lift Serum Absolute Advanced Age-Reversing Makeup,Foundation,12,90.6,65.87,0.6666666666666666,3.95,0.79,4,7
+Laura Mercier,Flawless Lumiere Foundation,Foundation,30,84.42,33.21,0.23333333333333334,0.935,3.46,22,7
+Laura Mercier,Real Flawless Weightless Perfecting Waterproof Foundation,Foundation,31,91.82,20.37,0.12903225806451613,0.625,8.77,26,4
+Laura Mercier,Tinted Blur Balm,Skin tint,8,83.72,31.12,0.5,8.11,6.94,4,3
+Laura Mercier,Tinted Moisturizer Blurred Matte SPF 30,Skin tint,20,86.35,23.92,0.4,2.09,3.645,11,8
+Laura Mercier,Tinted Moisturizer Light Revealer SPF 25,Skin tint,14,84.07,31.95,0.2857142857142857,2.09,4.48,10,3
+Laura Mercier,Tinted Moisturizer Natural Dewy SPF 30,Skin tint,20,86.35,23.92,0.4,2.09,3.645,11,8
+Makeup by Mario,SurrealSkin Foundation,Foundation,39,90.48,22.48,0.358974358974359,1.135,1.3199999999999998,24,14
+Makeup by Mario,SurrealSkin Natural Finish Foundation,Foundation,32,86.75,21.51,0.34375,0.96,2.5250000000000004,21,10
+Maybelline,Dream Radiant Liquid Hydrating Foundation,Foundation,6,96.96,28.78,0.3333333333333333,7.789999999999999,24.83,4,1
+Maybelline,Dream Urban Cover Flawless Coverage Foundation SPF 50,Foundation,8,91.31,42.35,0.25,4.93,14.584999999999999,5,2
+Maybelline,Fit Me Dewy + Smooth Foundation,Foundation,20,94.42,24.82,0.15,1.19,17.259999999999998,17,2
+Maybelline,Fit Me Matte + Poreless Foundation,Foundation,40,94.42,24.82,0.225,0.65,2.11,30,9
+Maybelline,Instant Age Rewind Eraser Treatment Makeup,Foundation,16,90.59,40.2,0.25,1.595,8.52,12,3
+Maybelline,Lifter Plump & Glow Foundation,Foundation,24,83.54,11.12,0.3333333333333333,1.955,3.98,16,7
+Maybelline,Super Stay 24HR Skin Tint with Vitamin C,Skin tint,18,91.2,21.71,0.2222222222222222,1.36,8.17,13,4
+Maybelline,Super Stay Lumi-Matte Foundation,Foundation,24,89.42,14.33,0.2916666666666667,1.42,5.06,16,7
+NYX Professional Makeup,Bare With Me Blur Tint Foundation,Foundation,24,84.22,20.31,0.4583333333333333,1.1400000000000001,2.09,12,11
+NYX Professional Makeup,Buttermelt Glaze Soft Glow Skin Tint SPF 30,Skin tint,10,77.09,13.06,0.4,7.46,8.235,5,4
+NYX Professional Makeup,Make 'Em Wonder Soft Matte Buildable Foundation,Foundation,45,87.55,9.68,0.3333333333333333,1.08,1.705,30,14
+Rare Beauty,Liquid Touch Weightless Foundation,Foundation,48,91.18,25.27,0.3541666666666667,0.71,2.16,30,17
+Rare Beauty,True to Myself Natural Matte Longwear Foundation,Foundation,48,90.81,15.88,0.20833333333333334,0.75,3.07,38,9
+e.l.f.,Camo CC Cream,CC cream,30,82.98,21.83,0.4666666666666667,1.605,1.87,16,13
+e.l.f.,Halo Glow Liquid Filter,Glow filter,15,82.3,28.35,0.3333333333333333,1.53,5.38,9,5
+e.l.f.,Halo Glow Skin Tint SPF 50,Skin tint,18,85.88,23.57,0.5,1.31,1.835,9,8
+e.l.f.,Hydrating Camo CC Cream,CC cream,30,89.96,30.71,0.5333333333333333,1.965,1.67,14,15
+e.l.f.,Soft Glam Satin Foundation,Foundation,36,86.33,22.39,0.3611111111111111,0.82,1.835,23,12

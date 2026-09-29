@@ -1,0 +1,29 @@
+BRAND|NYX Professional Makeup
+PRODUCT|Bare With Me Blur Tint Foundation
+URL|https://www.nyxcosmetics.com/face/foundation/bare-with-me-blur-skin-tint-foundation/NYX_1050.html
+METHOD|css_swatch_color
+N|24
+Pale|E8CDBD|OOS
+Fair|E9CBB9
+Light-Ivory|DCB3A5|OOS
+Light-Neutral|D9B199
+Vanilla|DBB598|OOS
+Soft-Beige|D6A483
+Golden|D39972|OOS
+Golden-Light|B9855B|OOS
+Light-Medium|B98C69
+Medium|BB8962
+Medium-Neutral|BB8461|OOS
+Medium-Dark|B37048
+Caramel|B37449
+Medium-Tan|A76947|OOS
+Warm-Honey|A26444
+Warm-Caramel|8F543C|OOS
+Truffle|8E4C38|OOS
+Nutmeg|8B5239
+Deep-Golden|814B39
+Deep Bronze|824637
+Rich|644331
+Mocha|54312D
+Espresso|462E2B
+Java|402C2B|OOS

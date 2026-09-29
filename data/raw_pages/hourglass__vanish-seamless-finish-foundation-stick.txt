@@ -1,0 +1,38 @@
+BRAND|Hourglass
+PRODUCT|Vanish Seamless Finish Foundation Stick
+URL|https://www.hourglasscosmetics.com/products/vanish-seamless-finish-foundation-stick
+METHOD|css_swatch_color
+N|33
+Blanc 1 - Fair with Cool Undertones|DBC8B6
+Cream 1.5 - Fair with Cool Undertones|ECC3B2
+Cotton 2 - Fair with Warm Undertones|FCE1CB
+Alabaster 2.5 - Fair with Cool Undertones|F1BF9F
+Porcelain 3 - Fair with Neutral Undertones|EABEB0
+Bisque 3.5 - Fair with Warm Undertones|EDC8A3
+Linen 4 - Light with Warm Undertones|E7B78A
+Vanilla 4.5 - Light with Cool Undertones|E1B6A1
+Shell 5 - Light with Neutral Undertones|C6A992
+Natural 5.5 - Light with Warm Undertones|DDA46F
+Buff 6 - Light Medium with Warm Undertones|D7A179
+Ivory 6.5 - Light Medium with Cool Undertones|D5A286
+Warm Ivory 7 - Light Medium with Warm Undertones|D9B48F
+Nude 7.5 - Light Medium with Neutral Undertones|BF9474
+Sand 8 - Light Medium with Warm Undertones|CDA077
+Golden 8.5 - Medium with Warm Undertones|C39367
+Golden Natural 9 - Medium with Neutral Undertones|BD9A7A
+Light Beige 9.5 - Medium with Cool Undertones|D5A286
+Beige 10 - Medium with Warm Undertones|B4875E
+Warm Beige 10.5 - Medium with Neutral Undertones|B7916C
+Golden Tan 11 - Medium with Warm Undertones|C58B68
+Honey 11.5 - Medium Deep with Warm Undertones|B58150
+Warm Honey 12 - Medium Deep with Neutral Undertones|AD7C59
+Amber 12.5 - Medium Deep with Warm Undertones|A47449
+Golden Amber 13 - Medium Deep with Warm Undertones|9E6A38
+Natural Amber 13.5 - Medium Deep with Neutral Undertones|97694C
+Warm Almond 14 - Deep with Warm Undertones|8F573A
+Golden Almond 14.5 - Deep with Warm Undertones|835D32
+Almond 15 - Deep with Cool Undertones|956C58
+Sable 15.5 - Deep with Neutral Undertones|744F28
+Walnut 16 - Deep with Warm Undertones|7C4D3A
+Chestnut 16.5 - Deep with Neutral Undertones|623B2A
+Espresso 17.5 - Deep with Cool Undertones|4E3629

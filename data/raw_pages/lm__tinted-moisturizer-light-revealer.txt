@@ -1,0 +1,19 @@
+BRAND|Laura Mercier
+PRODUCT|Tinted Moisturizer Light Revealer SPF 25
+URL|https://www.lauramercier.com/products/tinted-moisturizer-light-revealer-natural-skin-illuminator
+METHOD|css_swatch_color
+N|14
+1C0 Cameo|F6C9A8
+0N1 Petal|EFC29F
+0W1 Pearl|F1CAA3
+1W1 Porcelain|EFB989
+2N1 Nude|D9A475
+2W1 Natural|E2B07E
+3N1 Sand|D39D6B
+3W1 Bisque|D39F6E
+4C1 Almond|CF9869
+4W1 Tawny|D39D68
+5N1 Walnut|A66A3D
+5W1 Tan|AD6F44
+6C1 Cacao|6D4027
+6N1 Mocha|9B5E33

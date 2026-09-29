@@ -1,0 +1,41 @@
+BRAND|e.l.f.
+PRODUCT|Soft Glam Satin Foundation
+URL|https://www.elfcosmetics.com/products/soft-glam-satin-foundation
+METHOD|css_swatch_color
+N|36
+10 Fair Cool|EBD4C2
+11 Fair Neutral|EBD2B3
+12 Fair Warm|E9D0AF
+13 Fair Neutral|E1C2A5
+14 Fair Cool|ECC7A4
+15 Fair Warm|E9C190
+20 Light Cool|E5BFA0
+21 Light Neutral|D8A47E
+22 Light Warm|CCA377
+23 Light Cool|DEAE86
+24 Light Warm|D19E71
+25 Light Neutral|CC9775
+30 Medium Warm|D29964
+31 Medium Neutral|B07D5D
+32 Medium Neutral|CE9761
+33 Medium Warm|CF9563
+34 Medium Cool|D19769
+35 Medium Cool|D09670
+40 Tan Warm|BA8656
+41 Tan Neutral|B57E48
+42 Tan Neutral|B2724A
+43 Tan Cool|BE8357
+44 Tan Cool|B87F54
+45 Tan Warm|B47647
+50 Deep Warm|965A36
+51 Deep Cool|9B582D
+52 Deep Cool|7C442B
+53 Deep Neutral|89532F
+54 Deep Neutral|7C4B2B
+55 Deep Warm|785134
+60 Rich Cool|663723
+61 Rich Cool|633827
+62 Rich Warm|693D22
+63 Rich Warm|5D3625
+64 Rich Neutral|52362A
+65 Rich Neutral|4E2D24

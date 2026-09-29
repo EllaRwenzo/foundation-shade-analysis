@@ -1,0 +1,37 @@
+BRAND|Hourglass
+PRODUCT|Ambient Soft Glow Foundation
+URL|https://www.hourglasscosmetics.com/products/ambient-soft-glow-foundation
+METHOD|css_swatch_color
+N|32
+1 - Fairest with Cool Undertones|F1CAAD
+1.5 - Very Fair with Cool Undertones|E1C4AE
+2 - Very Fair with Warm Undertones|CBB094
+2.5 - Fair with Cool Undertones|F3CFB3
+3 - Fair with Neutral Undertones|EDC8A3
+3.5 - Fair with Warm Undertones|E9CDA5
+4 - Light with Warm Undertones|E7B78A
+4.5 - Light with Cool Undertones|E1B6A1
+5 - Light with Neutral Undertones|F1C6A6
+5.5 - Light with Warm Undertones|F2BFA0
+6 - Light Medium with Warm Undertones|CDA788
+6.5 - Light Medium with Neutral Undertones|D7A179
+7 - Light Medium with Warm Undertones|F0BF9B
+7.5 - Light Medium with Neutral Undertones|CDA890
+8 - Light Medium with Neutral Undertones|B0896E
+9 - Medium with Warm Undertones|AC7644
+9.5 - Medium with Cool Undertones|D5A286
+10 - Medium with Warm Undertones|CDA177
+10.5 - Medium with Neutral Undertones|B7916C
+11 - Medium with Neutral Undertones|AD7C59
+11.5 - Medium Deep with Warm Undertones|C58B68
+12 - Medium Deep with Neutral Undertones|986F54
+13 - Medium Deep with Warm Undertones|9E6A38
+13.5 - Medium Deep with Neutral Undertones|946037
+14 - Deep with Warm Undertones|9D6E46
+14.5 - Deep with Warm Undertones|9A5F3A
+15 - Deep with Cool Undertones|9B6448
+15.5 - Deep with Neutral Undertones|744F28
+16 - Deep with Warm Undertones|85431E
+16.5 - Very Deep with Neutral Undertones|713F2A
+17 - Very Deep with Cool Undertones|5B3427
+17.5 - Deepest with Neutral Undertones|623B2A

@@ -1,0 +1,25 @@
+BRAND|L'Oreal Paris
+PRODUCT|Infallible Cushion Foundation
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/infallible-cushion-foundation
+METHOD|css_swatch_color
+N|20
+15 cool|FDE7DA
+20 cool|FDE1CD
+50 neutral|F6DCC2
+100 neutral|F8D5B6
+120 warm|F0D0B2
+127 neutral|EDCFB7
+140 neutral|EDC3A6
+220 cool|F1C598
+250 neutral|E9BC97
+253 warm|DDB08B
+257 warm|E5B284
+260 warm|E6B18B
+300 cool|D59F7D
+320 cool|C89064
+365 neutral|B8734F
+370 cool|A2623E
+384 neutral|7F503B
+410 cool|67341E
+420 cool|4D2919
+130 warm|F0CBAA

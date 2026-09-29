@@ -1,0 +1,35 @@
+BRAND|Laura Mercier
+PRODUCT|Flawless Lumiere Foundation
+URL|https://www.lauramercier.com/products/flawless-lumiere-foundation
+METHOD|css_swatch_color
+N|30
+1C0 Cameo|F5CBA6|OOS
+1C1 Shell|E0AF86|OOS
+1N1 Creme|E1B98B|OOS
+1W1 Ivory|E5B27D|OOS
+1N2 Vanille|E6B384|OOS
+2C1 Ecru|C99268|OOS
+2N1 Cashew|D6A77C|OOS
+2W1 Macadamia|DCAA7C
+2N1.5 Beige|F2C596|OOS
+2W1.5 Bisque|E2AD80|OOS
+2N2 Linen|D49D6F
+2W2 Butterscotch|C98D54|OOS
+3C1 Dune|D1996C
+3N1 Buff|C59165|OOS
+3W1 Dusk|C18A58
+3N1.5 Latte|E6B382
+3N2 Honey|D79B6D
+3W2 Golden|D99C68
+4C1 Praline|B06E39|OOS
+4N1 Suntan|BE824C|OOS
+4W1 Maple|C48548
+4W1.5 Tawny|CD9B69
+4W2 Chai|C1894D|OOS
+5C1 Nutmeg|9A5E2D|OOS
+5N1 Pecan|A66934
+5W1 Amber|BF8042
+5N2 Hazelnut|B37A47
+6N1 Truffle|75482A|OOS
+6N2 Espresso|744126|OOS
+6W1 Ganache|82502A

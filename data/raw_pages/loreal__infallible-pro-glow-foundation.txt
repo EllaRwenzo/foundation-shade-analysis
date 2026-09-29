@@ -1,0 +1,17 @@
+BRAND|L'Oreal Paris
+PRODUCT|Infallible Pro-Glow Foundation
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/infallible-pro-glow-foundation
+METHOD|css_swatch_color
+N|12
+212 cocoa|974E24
+211 creme cafe|C4824B
+210 classic tan|C28C51
+209 caramel beige|CA9351
+208 sun beige|CD9867
+206 buff beige|C99871
+207 sand beige|DAA578
+205 natural beige|DAAA7A
+204 natural buff|E1AD86
+202 creamy natural|EDB683
+201 classic ivory|FAC7AA
+203 nude beige|E5B289

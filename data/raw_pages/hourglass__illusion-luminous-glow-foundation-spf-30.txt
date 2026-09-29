@@ -1,0 +1,37 @@
+BRAND|Hourglass
+PRODUCT|Illusion Luminous Glow Foundation SPF 30
+URL|https://www.hourglasscosmetics.com/products/illusion-luminous-glow-foundation-spf-30
+METHOD|css_swatch_color
+N|32
+1 - Very fair with neutral undertones|EACBBC
+1.5 - Very fair with cool pink undertones|E1BBB4
+2 - Fair with neutral undertones|F1CAAE
+2.5 - Fair with warm golden undertones|E9CDA5
+3 - Fair with cool pink undertones|E9BEB0
+4 - Light with warm peach undertones|EBC2B2
+5 - Light with warm gold undertones|F3BE9A
+6 - Light with neutral undertones|DFB8A7
+7 - Light with warm peach undertones|C09C83
+7.5 - Light medium with warm olive undertones|CDA788
+8 - Light medium with warm peach undertones|D9A179
+8.5 - Light medium with cool rosy undertones|D9AC95
+9 - Light medium with warm peach undertones|E59E6D
+10 - Medium with neutral undertones|D5B49E
+11 - Medium with cool pink undertones|E1B7A7
+12 - Medium with warm peach undertones|CEA890
+13 - Medium with warm golden undertones|D6A285
+14 - Medium with warm olive undertones|C79674
+15 - Medium with cool rosy undertones|C68B66
+16 - Medium with warm golden undertones|D6A285
+17 - Medium deep with warm peach undertones|C68B66
+18 - Medium deep with warm golden undertones|C88242
+19 - Medium deep with warm olive undertones|AF7C58
+19.5 - Medium deep with neutral undertones|BF9474
+20 - Medium deep with warm golden undertones|AC6E49
+20.5 - Medium deep with neutral undertones|AD7C59
+21 - Medium deep with warm peach undertones|9B6448
+22 - Deep with cool rosy undertones|85431E
+23 - Deep with warm olive undertones|9D6E46
+24 - Deep with cool rosy undertones|7C4A32
+25 - Very deep with neutral undertones|733A1C
+26 - Very deep with neutral undertones|5E3C32

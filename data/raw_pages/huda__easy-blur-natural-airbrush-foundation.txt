@@ -1,0 +1,43 @@
+BRAND|Huda Beauty
+PRODUCT|Easy Blur Natural Airbrush Foundation with Niacinamide
+URL|https://hudabeauty.com/en-us/products/easy-blur-natural-airbrush-foundation-with-niacinamide-hb01166m
+METHOD|css_swatch_color
+N|38
+Milkshake 100B|FBE4D6
+Angel Food 110N|FED7B4
+Vanilla 120B|FDD4B4
+Cashew 140G|EDC3A3
+Creme Brulee 150G|E3BB93
+Shortbread 200B|E3BCA0
+Chai 210B|D8AD8E
+Custard 220N|D19F7E
+Macaroon 230N|DBA78B
+Toasted Coconut 240N|D49F7D
+Cheesecake 250G|DEAC8E
+Apple Pie 255B|D19979
+Cream Puff 260W|F5B37B
+Latte 300N|CD9B7D
+Iced Frappe 305C|E1A578
+Golden Milk 307N|E8AC75
+Amaretti 310G|CA9165
+TresLeches 320G|BD8E6B
+Butter Pecan 330N|C9926E
+Baklava 340G|BD8559
+Dulce De Leche 350G|D19B6E
+Creme Caramel 355W|DF9D5B
+Macchiato 400G|CB906E
+Toffee 420G|C18355
+Pistachio Cream 425N|DA905A
+Gingerbread 430N|B57746
+Cinnamon 440G|A26324
+Chocolate Mousse 450G|985E30
+Peanut Butter 455R|8F541E
+Mocha 500G|8D582C
+Cocoa 510R|885842
+Hot Fudge 550R|734A39
+Ganache 560R|643F38
+Chocolate Swirl 570W|592B1A
+Truffle Cake 580N|48261A
+True Lava Cake 590R|5D352A
+Molten Cocoa 595N|2C1917
+Espresso 600N|45332E

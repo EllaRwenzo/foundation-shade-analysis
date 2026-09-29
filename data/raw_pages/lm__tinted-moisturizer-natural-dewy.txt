@@ -1,0 +1,25 @@
+BRAND|Laura Mercier
+PRODUCT|Tinted Moisturizer Natural Dewy SPF 30
+URL|https://www.lauramercier.com/products/tinted-moisturizer-natural-dewy-broad-spectrum-spf-30-suncreen
+METHOD|css_swatch_color
+N|20
+0N Silk|F3D3AE
+1C Cameo|F1D0B7|OOS
+1N Birch|E7C398
+1W Blonde|E4C08C
+2C Oak|DBB596
+2N Maple|D9B388
+2W Citrine|D9AC73
+3C Fawn|C39674
+3N Sand|C4966E
+3W Palomino|C1905D
+4C Hazel|AD7B52
+4N Teak|AD7D50
+4W Ochre|9A6A36
+5C Cedar|875937
+5N Clay|885B2F
+5W Terracotta|7A5326
+6C Brunette|73482E
+6N Umber|644027
+7C Sable|5C382B
+7N Mahogany|52311C

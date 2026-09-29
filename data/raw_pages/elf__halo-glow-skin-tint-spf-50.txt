@@ -1,0 +1,23 @@
+BRAND|e.l.f.
+PRODUCT|Halo Glow Skin Tint SPF 50
+URL|https://www.elfcosmetics.com/products/halo-glow-skin-tint-spf-50
+METHOD|css_swatch_color
+N|18
+1 Fair Neutral|F2CCA8
+2 Fair Warm|F0D2B0
+3 Fair Cool|F6CCB6
+4 Light Neutral|F0C9A0
+5 Light Warm|E3B885
+6 Light Cool|E8B08D
+7 Medium Warm|E0A26F
+8 Medium Neutral|C48C67
+9 Medium Cool|CC8760
+10 Tan Neutral|B6703F
+11 Tan Warm|B36C42
+12 Tan Cool|A86946
+13 Deep Neutral|7A4D38
+14 Deep Warm|844E36
+15 Deep Cool|864D3A
+16 Rich Cool|6B3A29
+17 Rich Warm|693F29
+18 Rich Neutral|4D3221

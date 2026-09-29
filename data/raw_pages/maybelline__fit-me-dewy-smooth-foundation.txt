@@ -1,0 +1,25 @@
+BRAND|Maybelline
+PRODUCT|Fit Me Dewy + Smooth Foundation
+URL|https://www.maybelline.com/face-makeup/foundation-makeup/fit-me-dewy-smooth-foundation
+METHOD|css_swatch_color
+N|20
+110|FFECD9|Light
+115|F3D7C7|Ivory,Light
+118|EBC5AD|Beige
+120|E8C4A6|Ivory,Light
+125|E9BF9A|Beige,Light
+128|CC9D69|Beige
+130|EAB59C|Beige,Light
+210|EAB992|Beige,Light
+220|F7B886|Beige,Light
+225|EEB390|Medium,Beige
+230|EAB08D|Medium,Beige
+235|ECB59A|Medium,Beige
+240|E4A87F|Beige,Light
+310|E29C76|Medium,Beige
+315|D89876|Medium,Medium/Deep
+322|DB9775|Beige
+330|D99358|Medium,Deep,Medium/Deep
+355|C47E5A|Deep
+360|8C503B|Deep
+375|533417|Brown

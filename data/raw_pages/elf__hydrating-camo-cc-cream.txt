@@ -1,0 +1,35 @@
+BRAND|e.l.f.
+PRODUCT|Hydrating Camo CC Cream
+URL|https://www.elfcosmetics.com/products/hydrating-camo-cc-cream
+METHOD|css_swatch_color
+N|30
+Fair 120 N – fair with neutral undertones|F2C79C
+Fair 125 C – fair with cool undertones|ECC6A2
+Fair 140 W – fair with warm undertones|F5D099
+Fair 150 C – fair with cool undertones|F1BE91
+Light 205 N – light with neutral undertones|CEA287
+Light 210 N – light with neutral undertones|E2A97B
+Light 240 W – light with warm undertones|E9BC85
+Light 250 W – light with warm undertones|D8A071
+Medium 310 C – medium with cool undertones|F0B179
+Tan 400 W – tan with warm undertones|BA7548
+Fair 100 W – fair with warm undertones|FDDEAF
+Light 280 N – light with neutral undertones|DDA874
+Medium 330 W – medium with warm undertones|D09C6C
+Medium 355 W – medium with warm undertones|D39663
+Medium 370 N – medium with neutral undertones|C28865
+Medium 375 N – medium with neutral undertones|C0805D
+Tan 415 C – tan with cool undertones|AF7D57
+Tan 425 N – tan with neutral undertones|AA6949
+Tan 450 N – tan with neutral undertones|AE744C
+Tan 460 W – tan with warm undertones|AA6D40
+Deep 500 W - deep with warm undertones|725641
+Deep 510 C – deep with cool undertones|9D5B38
+Deep 530 W – deep with warm undertones|6A442B
+Deep 540 N – deep with neutral undertones|865330
+Deep 560 C – deep with cool undertones|8C4936
+Rich 610 N – rich with neutral undertones|6D4F38
+Rich 620 W – rich with warm undertones|8C512D
+Rich 640 W – rich with warm undertones|7E483C
+Rich 650 C – rich with cool undertones|683D34
+Rich 660 N – rich with neutral undertones|6D4B3F

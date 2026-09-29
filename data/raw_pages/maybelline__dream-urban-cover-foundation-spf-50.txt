@@ -1,0 +1,13 @@
+BRAND|Maybelline
+PRODUCT|Dream Urban Cover Flawless Coverage Foundation SPF 50
+URL|https://www.maybelline.com/face-makeup/foundation-makeup/dream-urban-cover-flawless-coverage-foundation-makeup-spf-50
+METHOD|css_swatch_color
+N|8
+Porcelain|F0E5D1|Beige,Light
+Natural Ivory|E6D4C6|Beige,Light,Ivory
+Classic Ivory|E3D1B9|Beige,Ivory,Light
+Warm Nude|DBC2A3|
+Natural Beige|CCB593|Beige,Medium
+Sun Beige|CAAA83|
+Toffee|A78A62|Brown,Deep,Medium/Deep
+Truffle|7E5E38|Brown,Deep

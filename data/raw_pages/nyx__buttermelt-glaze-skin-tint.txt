@@ -1,0 +1,15 @@
+BRAND|NYX Professional Makeup
+PRODUCT|Buttermelt Glaze Soft Glow Skin Tint SPF 30
+URL|https://www.nyxcosmetics.com/face/foundation/buttermelt-glaze-spf-skin-tint/NYX_1127.html
+METHOD|css_swatch_color
+N|10
+01-Whipped-Butta|EBB388
+02-Vanilla-Bean-Butta|D19A6D
+03-Cashew-Butta|C18459
+04-Almond-Butta|BE814E
+05-Chai-Butta|9B6239|OOS
+06-Praline-Butta|A16639|OOS
+07-Toffee-Butta|88502D|OOS
+08-Nutmeg-Butta|6B3E23|OOS
+09-Hazelnut-Butta|4C2918
+10-Chocolate-Butta|331C10|OOS

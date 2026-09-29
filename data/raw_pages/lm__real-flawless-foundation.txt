@@ -1,0 +1,36 @@
+BRAND|Laura Mercier
+PRODUCT|Real Flawless Weightless Perfecting Waterproof Foundation
+URL|https://www.lauramercier.com/products/real-flawless
+METHOD|css_swatch_color
+N|31
+0N1 Silk|FFE2C8
+0W1 Satin|FFE2C0
+0C1 Opal|FFE2D2
+1C1 Cool Vanille|FCD8C5
+1C2 Chiffon|FFD6BA
+1N2 Vanille|FFD6B8
+1W1 Cashmere|FFD0A5
+2C1 Ecru|FFC6A4
+2C2 Soft Sand|F2C3AB
+2N1 Cashew|F1CDAB
+2W1 Macadamia|F8CC9F
+2W2 Warm Linen|FDC593
+3W0 Sandstone|EEB98C
+3C1 Dune|FCB383
+3C2 Toffee|EDAB84
+3N1 Buff|F9AE85
+3N2 Camel|EFB089
+3W1 Dusk|F6B785
+4C0 Chestnut|EAAC7F
+4C1 Praline|DE915B|OOS
+4N1 Ginger|F3B97C
+4N2 Tea|E5AC85
+4W1 Suntan|D79E6A
+5C1 Sepia|C67246
+5N1 Cinnamon|C3783D
+5N2 Cardamom|CC774E
+5W1 Sienna|C27547
+6C1 Mink|973D23
+6N1 Clove|793821
+6W1 Ganache|9F502F
+7N1 Java|591E0D

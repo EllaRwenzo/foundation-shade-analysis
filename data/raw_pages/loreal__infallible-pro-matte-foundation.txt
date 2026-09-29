@@ -1,0 +1,27 @@
+BRAND|L'Oreal Paris
+PRODUCT|Infallible Pro-Matte Foundation
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/infallible-pro-matte-foundation
+METHOD|css_swatch_color
+N|22
+rich ebony 115|4D2006
+rich chocolate 114|4D2C0A
+brown suede 113|754728
+cocoa 112|925422
+soft sable 111|B87740
+classic tan 109|C27F48
+caramel beige 108|C0844E
+honey bisque 108.5|D99959
+crème café 110|DA9E6B
+ivory beige 107.5|CF9C7D
+fresh beige 107|D49E6C
+shell 106.5|D1A396
+sun beige 106|DAA271
+nude buff 104.5|DEB09E
+golden beige 104|EEB67E
+natural buff 103|E7AD82
+shell beige 102|E5AD8B
+ivory buff 101.5|F7CAB1
+classic ivory 101|F3C6A2
+true alabaster 100|FCD6C7
+true porcelain 099|FADCC8
+natural beige 105|E8B481

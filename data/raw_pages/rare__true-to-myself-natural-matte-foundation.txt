@@ -1,0 +1,53 @@
+BRAND|Rare Beauty
+PRODUCT|True to Myself Natural Matte Longwear Foundation
+URL|https://www.rarebeauty.com/products/true-to-myself-natural-matte-longwear-foundation
+METHOD|image_trimmed_mean_center50
+N|48
+1 Fair Neutral|FADFD8|1.00|200x200
+2 Fair Warm|F5DBCA|1.00|200x200
+3 Fair Cool|EDCDC2|1.00|200x200
+4 Fair Neutral|EFD0BD|1.00|200x200
+5 Fair Warm|F1CDB3|1.00|200x200
+6 Fair Neutral|F4D0BF|1.00|200x200
+7 Light Warm|F4D5B8|1.00|200x200
+8 Light Cool|F4CAB4|1.00|200x200
+9 Light Neutral|F3C8A5|1.00|200x200
+10 Light Warm|F7C797|1.00|200x200
+11 Light Cool|F8C3A1|1.00|200x200
+12 Light Warm|F5C191|1.00|200x200
+13 Light Neutral|FCC29E|1.00|200x200
+14 Light Medium Warm|F6BA97|1.00|200x200
+15 Light Medium Neutral|EEBA8A|1.00|200x200|OOS
+16 Light Medium Neutral|F2B684|1.00|200x200
+17 Light Medium Cool|F8B592|1.00|200x200
+18 Light Medium Neutral|EEB280|1.00|200x200
+19 Light Medium Warm|EFB782|1.00|200x200
+20 Light Medium Neutral|FBB383|1.00|200x200
+21 Light Medium Warm|E5A975|1.00|200x200
+22 Medium Cool|ECA684|1.00|200x200
+23 Medium Neutral|E6A36E|1.00|200x200|OOS
+24 Medium Warm|ECA765|1.00|200x200
+25 Medium Neutral|EDA670|1.00|200x200
+26 Medium Warm|E79D60|1.00|200x200
+27 Medium Warm|DF945D|1.00|200x200
+28 Medium Cool|DC996E|1.00|200x200
+29 Medium Neutral|E09156|1.00|200x200
+30 Medium Warm|CE894F|1.00|200x200
+31 Medium Deep Neutral|CF8659|1.00|200x200
+32 Medium Deep Neutral|D48858|1.00|200x200
+33 Medium Deep Cool|DC8758|1.00|200x200
+34 Medium Deep Warm|D2874F|1.00|200x200
+35 Medium Deep Cool|CC7F51|1.00|200x200
+36 Medium Deep Warm|CD7C42|1.00|200x200
+37 Medium Deep Cool|BF6E41|1.00|200x200
+38 Medium Deep Neutral|BF6E3E|1.00|200x200
+39 Medium Deep Warm|B16E39|1.00|200x200
+40 Deep Neutral|B3673F|1.00|200x200
+41 Deep Warm|9E5939|1.00|200x200
+42 Deep Cool|9A5B2F|1.00|200x200
+43 Deep Cool|965034|1.00|200x200
+44 Deep Warm|895023|1.00|200x200
+45 Deep Cool|723B1A|1.00|200x200
+46 Deep Neutral|713415|1.00|200x200
+47 Deep Neutral|55280B|1.00|200x200
+48 Deep Cool|451B0C|1.00|200x200

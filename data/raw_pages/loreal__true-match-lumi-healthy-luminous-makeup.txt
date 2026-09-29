@@ -1,0 +1,20 @@
+BRAND|L'Oreal Paris
+PRODUCT|True Match Lumi Healthy Luminous Makeup
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/true-match-lumi-healthy-luminous-makeup
+METHOD|css_swatch_color
+N|15
+sun beige|C8B27A
+nut brown/cocoa|9B6C49
+classic tan/ cappuccino|B28362
+soft sable|B88461
+creamy natural|C39B82
+buff beige|C99C7C
+classic beige|C79B7C
+sand beige|CB9D7D
+natural beige|CFA37D
+soft ivory/classic ivory|D4AD89
+shell beige|DBAA8A
+natural buff|E5BD99
+nude beige|F0D1B2
+porcelain/ light ivory|F6D6BC
+true beige|CEA17D

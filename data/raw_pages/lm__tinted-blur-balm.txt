@@ -1,0 +1,13 @@
+BRAND|Laura Mercier
+PRODUCT|Tinted Blur Balm
+URL|https://www.lauramercier.com/products/tinted-blur-balm
+METHOD|css_swatch_color
+N|8
+00|EFCAAB
+01|E3C0A3
+02|D3A981
+03|BC9270
+04|A77C55
+05|80593C
+06|6B4939
+07|5F4335

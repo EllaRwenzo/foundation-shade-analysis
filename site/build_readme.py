@@ -1,42 +1,48 @@
-# Foundation Shade Inclusivity Analysis
+"""Write README.md from the numbers the R report saved (run after knitting the report)."""
+import csv, os
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+H = {r["key"]: r["value"] for r in csv.DictReader(open(os.path.join(ROOT, "output/tables/headline_numbers.csv"), encoding="utf-8"))}
+B = list(csv.DictReader(open(os.path.join(ROOT, "output/tables/brand_summary.csv"), encoding="utf-8")))
+B.sort(key=lambda r: -float(r["pct_deeper_half"]))
+pct = lambda x: f"{float(x) * 100:.0f}%"
+n = int(H["n_shades"])
+SITE = "https://ellarwenzo.github.io/foundation-shade-analysis/"
+
+rows = "\n".join(
+    f"| {r['brand']} | {r['products']} | {r['shades']} | {float(r['lightest']):.1f} | {float(r['deepest']):.1f} | {pct(r['pct_deep'])} | {pct(r['pct_deeper_half'])} |"
+    for r in B)
+
+readme = f"""# Foundation Shade Inclusivity Analysis
 
 **How evenly do 10 beauty brands spread their foundation shades from light to deep?**
 
-I built an original dataset of **1,161 foundation shades** from **46 products** across **10 brands**
+I built an original dataset of **{n:,} foundation shades** from **{H['n_products']} products** across **{H['n_brands']} brands**
 by reading every shade swatch on the brands' official US product pages. I converted each swatch
-from HEX to RGB to CIELAB lightness (L\*) in R, then used descriptive statistics, a paired
+from HEX to RGB to CIELAB lightness (L\\*) in R, then used descriptive statistics, a paired
 statistical test and ggplot2 charts to see where the shades fall on the light-to-deep scale.
 
-- **Live project page:** [ellarwenzo.github.io/foundation-shade-analysis](https://ellarwenzo.github.io/foundation-shade-analysis/) (interactive shade explorer and charts)
-- **Full R report:** [report.html](https://ellarwenzo.github.io/foundation-shade-analysis/report.html) (all code, tables, charts and write-up; source in `analysis/shade_analysis.Rmd`)
+- **Live project page:** [ellarwenzo.github.io/foundation-shade-analysis]({SITE}) (interactive shade explorer and charts)
+- **Full R report:** [report.html]({SITE}report.html) (all code, tables, charts and write-up; source in `analysis/shade_analysis.Rmd`)
 - **Data:** [`data/clean/shades_clean.csv`](data/clean/shades_clean.csv) (one row per shade)
 
 ![Every shade, lightest to deepest](output/charts/03_shade_strip_by_brand.png)
 
 ## Key findings
 
-- **Most shades are light.** 70% of the 1,161 shades are in the lighter half of the
-  lightness scale. Only 12% are in the Deep band (L\* below 35), where Monk skin tones 8–10 sit.
+- **Most shades are light.** {pct(1 - float(H['share_deeper_half']))} of the {n:,} shades are in the lighter half of the
+  lightness scale. Only {pct(H['share_deep'])} are in the Deep band (L\\* below 35), where Monk skin tones 8–10 sit.
 - **No brand reaches an even split.** The share of shades in the deeper half ranges from
-  23% (Charlotte Tilbury) to 49% (NYX Professional Makeup).
+  {pct(B[-1]['pct_deeper_half'])} ({B[-1]['brand']}) to {pct(B[0]['pct_deeper_half'])} ({B[0]['brand']}).
 - **Deep shades are spaced further apart.** The typical gap between neighboring shades is
-  1.4 lightness points in a product's lighter half and 3.6 in its deeper half
-  (about 2.7×). This held in 40 of 45 products (Wilcoxon signed-rank test, p < 0.001).
-- **More shades does not mean more balance.** The 7 biggest ranges (40+ shades) put only
-  20%–44% of their shades in the deeper half (Spearman ρ = 0.17, p = 0.27).
+  {float(H['typical_gap_lighter_half']):.1f} lightness points in a product's lighter half and {float(H['typical_gap_deeper_half']):.1f} in its deeper half
+  (about {float(H['gap_ratio']):.1f}×). This held in {H['n_deeper_wider']} of {H['n_products_tested']} products (Wilcoxon signed-rank test, p < 0.001).
+- **More shades does not mean more balance.** The {H['n_big_ranges']} biggest ranges (40+ shades) put only
+  {pct(H['big_ranges_min_share'])}–{pct(H['big_ranges_max_share'])} of their shades in the deeper half (Spearman ρ = {float(H['spearman_rho']):.2f}, p = {float(H['spearman_p']):.2f}).
 
-| Brand | Products | Shades | Lightest L\* | Deepest L\* | Deep band | Deeper half |
+| Brand | Products | Shades | Lightest L\\* | Deepest L\\* | Deep band | Deeper half |
 |---|---:|---:|---:|---:|---:|---:|
-| NYX Professional Makeup | 3 | 79 | 87.5 | 9.7 | 20% | 49% |
-| e.l.f. | 5 | 129 | 90.0 | 21.8 | 15% | 42% |
-| Makeup by Mario | 2 | 71 | 90.5 | 21.5 | 17% | 35% |
-| Huda Beauty | 1 | 38 | 92.1 | 11.2 | 16% | 32% |
-| Rare Beauty | 2 | 96 | 91.2 | 15.9 | 9% | 29% |
-| Hourglass | 4 | 115 | 91.2 | 25.0 | 7% | 29% |
-| Laura Mercier | 6 | 123 | 91.8 | 20.4 | 11% | 27% |
-| L'Oreal Paris | 11 | 248 | 93.2 | 7.5 | 13% | 24% |
-| Maybelline | 8 | 156 | 97.0 | 11.1 | 11% | 24% |
-| Charlotte Tilbury | 4 | 106 | 93.5 | 14.8 | 8% | 23% |
+{rows}
 
 ![Share of shades in each band](output/charts/04_depth_bands_by_brand.png)
 ![Spacing between neighboring shades](output/charts/05_spacing_light_vs_deep.png)
@@ -93,7 +99,7 @@ deep, or bunched at the light end? I look at four things:
 
 `swatch → HEX → R, G, B → linear light → Y = 0.2126R + 0.7152G + 0.0722B → L* = 116·Y^(1/3) − 16 → bands, gaps, test`
 
-The depth bands are four equal 20-point slices of L\* between 15 and 95, which is the span of
+The depth bands are four equal 20-point slices of L\\* between 15 and 95, which is the span of
 Google's Monk Skin Tone Scale (tones 1–10). The spacing test compares, inside each product, the
 typical gap between neighboring shades in its lighter half vs. its deeper half (Wilcoxon signed-rank,
 paired, no bell-curve assumption).
@@ -101,9 +107,9 @@ paired, no bell-curve assumption).
 ## Limitations
 
 - Swatches are screen colors, not the product on skin, and brands don't calibrate them against each other.
-- 8 pairs of shades share one swatch color, and in 26 spots a higher-numbered shade has a
+- {H['n_repeated_color_pairs']} pairs of shades share one swatch color, and in {H['n_order_flags']} spots a higher-numbered shade has a
   clearly lighter swatch than the one before it, so swatches are approximate.
-- Lightness only; undertone is saved (a\*, b\*) but not analyzed yet.
+- Lightness only; undertone is saved (a\\*, b\\*) but not analyzed yet.
 - One day and ten brands; lineups change and these brands are not a random sample.
 
 ## Reproduce it
@@ -133,3 +139,6 @@ tableau/      Tableau-ready CSV and steps
 
 Monk Skin Tone Scale by Dr. Ellis Monk and Google (skintone.google), CC BY 4.0.
 Built with R: dplyr, tidyr, readr, stringr, forcats, ggplot2, farver, scales, R Markdown.
+"""
+open(os.path.join(ROOT, "README.md"), "w", encoding="utf-8").write(readme)
+print("wrote README.md")

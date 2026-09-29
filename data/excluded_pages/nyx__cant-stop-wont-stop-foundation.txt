@@ -1,0 +1,29 @@
+BRAND|NYX Professional Makeup
+PRODUCT|Can't Stop Won't Stop Full Coverage Foundation
+URL|https://www.nyxcosmetics.com/cant-stop-wont-stop-full-coverage-foundation/NYX_636.html
+METHOD|css_swatch_color
+EXCLUDED_REASON|Clearance: page lists 23 leftover shades and none can be bought (0 of 23 in stock)
+N|23
+CSWSF1.5 - Fair|E0C5AC|OOS
+CSWSF06 - Vanilla|E5B899|OOS
+CSWSF11 - Beige|C1956A|OOS
+CSWSF12.7 - Neutral Tan|AD7751|OOS
+CSWSF13 - Golden|B6855C|OOS
+CSWSF14 - Golden Honey|BB835C|OOS
+CSWSF15 - Caramel|B48864|OOS
+CSWSF15.3 - Almond|A36133|OOS
+CSWSF15.5 - Cinnamon|B87F56|OOS
+CSWSF15.8 - Honey|AD6D41|OOS
+CSWSF15.9 - Warm Honey|AA714B|OOS
+CSWSF16 - Mahogany|A16A49|OOS
+CSWSF16.5 - Nutmeg|A36E45|OOS
+CSWSF16.7 - Warm Mahogany|8F4F23|OOS
+CSWSF17 - Cappuccino|935C3B|OOS
+CSWSF18 - Deep Sable|875D3D|OOS
+CSWSF20 - Deep Rich|70422C|OOS
+CSWSF22 - Deep|663F2B|OOS
+CSWSF22.5 - Warm Walnut|542D26|OOS
+CSWSF22.7 - Deep Walnut|63341F|OOS
+CSWSF23 - Chestnut|543222|OOS
+CSWSF24 - Deep Espresso|542D22|OOS
+CSWSF25 - Deep Ebony|4C281B|OOS

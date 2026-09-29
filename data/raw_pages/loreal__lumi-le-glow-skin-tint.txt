@@ -1,0 +1,21 @@
+BRAND|L'Oreal Paris
+PRODUCT|Lumi Le Glow Skin Tint
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/lumi-le-glow-tint
+METHOD|css_swatch_color
+N|16
+warm 110|F5D5B3
+neutral 120|F1C7AA
+warm 130|E7BE91
+cool 140|E6B496
+neutral 200|DAB28A
+neutral 210|D4A582
+warm 220|D39D67
+neutral 230|C28D61
+neutral 300|A87E50
+warm 310|AE784F
+cool 320|9B684B
+neutral 400|845740
+cool 410|6A361C
+neutral 420|623B2C
+cool 430|3E2316
+cool 100|F3D6C1

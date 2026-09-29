@@ -1,0 +1,27 @@
+BRAND|L'Oreal Paris
+PRODUCT|Infallible Skin Ink 2-in-1 Foundation Concealer
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/infallible-skin-ink-2-in-1-foundation-concealer
+METHOD|css_swatch_color
+N|22
+15 neutral|F7DECD
+20 neutral|F6D9C2
+40 warm|F1D6BE
+100 warm|E4BD9C
+125 warm|E2B591
+130 cool|E2B6A1
+140 warm|E2B388
+180 cool|E0A57D
+265 neutral|D69A71
+270 warm|D49D70
+290 warm|CF9967
+318 cool|BA7F5B
+325 warm|B5764E
+375 warm|A56942
+400 cool|934E33
+420 neutral|81482C
+430 cool|773E2D
+440 neutral|6F3D2B
+450 cool|6F3D2B
+460 neutral|592C18
+465 cool|4A231D
+80 warm|EFCDAE

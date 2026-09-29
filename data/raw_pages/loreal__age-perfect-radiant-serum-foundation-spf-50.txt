@@ -1,0 +1,35 @@
+BRAND|L'Oreal Paris
+PRODUCT|Age Perfect Radiant Serum Foundation SPF 50
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/age-perfect-makeup-radiant-serum-foundation-with-spf-50
+METHOD|css_swatch_color
+N|30
+155 espresso|4D2115
+150 deep amber|572800
+145 mahogany|5E2208
+135 deep cool|703015
+130 sienna|984A25
+125 cappuccino|A35D27
+120 almond|B26531
+115 hazelnut|AE6E33
+110 classic tan|C57F4F
+105 soft sable|BE7541
+100 toffee|CE7E50
+95 amber beige|D58C67
+90 caramel beige|C68F57
+85 perfect beige|D6996E
+80 golden sun|DB9663
+75 golden honey|E3A169
+70 sand|E0AB80
+65 honey rose|E6A67D
+60 ivory beige|E8B087
+55 warm beige|EBAD87
+50 golden beige|EDB890
+45 golden vanilla|EBB582
+40 natural buff|EBB892
+35 nude beige|F0BB93
+30 beige rose|F0BFA3
+25 cream beige|F2C2A7
+20 golden ivory|F7C7A7
+15 rose ivory|F7CCAE
+10 ivory|F7DCC0
+140 chestnut|622400

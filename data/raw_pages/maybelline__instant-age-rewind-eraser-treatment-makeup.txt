@@ -1,0 +1,21 @@
+BRAND|Maybelline
+PRODUCT|Instant Age Rewind Eraser Treatment Makeup
+URL|https://www.maybelline.com/face-makeup/foundation-makeup/instant-age-rewind-eraser-treatment-makeup
+METHOD|css_swatch_color
+N|16
+110|FBE0BF|Light,New,Warm
+112|FED4B2|Light,New,Cool
+118|F8D4AF|Light,New,Warm
+120|F5C19B|Light,Cool
+130|F6C89A|Light,Warm
+150|F3C49E|Light,Neutral
+190|E0AA86|Light,Neutral
+200|F3C190|Light,Cool
+210|EDB377|Light,New,Warm
+225|E1AF77|Medium,New,Warm
+300|E29D74|Medium,Neutral
+310|E7A264|Medium,New,Cool
+330|CA854A|Medium,New,Neutral
+340|BD7B44|Medium,New,Warm
+355|A36636|Dark,New,Cool
+360|89512A|Dark,New,Warm

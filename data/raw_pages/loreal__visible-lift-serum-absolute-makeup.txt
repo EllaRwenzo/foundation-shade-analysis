@@ -1,0 +1,17 @@
+BRAND|L'Oreal Paris
+PRODUCT|Visible Lift Serum Absolute Advanced Age-Reversing Makeup
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/visible-lift-serum-absolute-advanced-age-reversing-makeup
+METHOD|css_swatch_color
+N|12
+honey beige|D29469
+classic tan|C69677
+buff beige|D9A27D
+sun beige|D2A980
+natural buff|E6B288
+sand beige|E1B08A
+creamy natural|E0B499
+nude beige|EBBF9D
+classic ivory|F1CDB0
+soft ivory|F5D3AE
+light ivory|FEDFBF
+natural beige|DFB48A

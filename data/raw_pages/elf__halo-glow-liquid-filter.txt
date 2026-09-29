@@ -1,0 +1,20 @@
+BRAND|e.l.f.
+PRODUCT|Halo Glow Liquid Filter
+URL|https://www.elfcosmetics.com/products/halo-glow-liquid-filter
+METHOD|css_swatch_color
+N|15
+0 Fair Neutral Warm|E4BC98
+0.5 Fair Cool|E4C5A6
+00 Fair Neutral|E5C4A5
+1 Fair Neutral Peach|EAC6AC
+2 Fair/Light|DCC1A6
+3 Light/Medium Cool|D6AD91
+3.5 Medium Neutral Olive|C39B6A
+4 Medium Neutral|BE926D
+5 Medium/Tan Warm|BF9668
+5.5 Medium/Tan Neutral Warm|B07943
+6 Tan/Deep Warm|96613F
+6.5 Deep Warm|9E5C28
+7 Deep/Rich Cool|83543A
+8 Rich Cool|6C3F2A
+8.5 Rich Neutral Warm|65371D

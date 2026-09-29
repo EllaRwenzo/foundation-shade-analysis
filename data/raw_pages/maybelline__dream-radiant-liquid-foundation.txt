@@ -1,0 +1,11 @@
+BRAND|Maybelline
+PRODUCT|Dream Radiant Liquid Hydrating Foundation
+URL|https://www.maybelline.com/face-makeup/foundation-makeup/dream-radiant-liquid-medium-coverage-hydrating-foundation
+METHOD|css_swatch_color
+N|6
+Fair Porcelain|FFF5E7|Beige,Light
+Fair Ivory|FDEAD8|Beige,Ivory,Light
+Sandy Beige|E6C59C|Beige,Light/Medium
+Pure Beige|E4BF98|Beige,Medium
+Coconut|A97547|Brown,Medium/Deep
+Java|5A3E25|

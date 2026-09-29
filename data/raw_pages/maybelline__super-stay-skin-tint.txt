@@ -1,0 +1,23 @@
+BRAND|Maybelline
+PRODUCT|Super Stay 24HR Skin Tint with Vitamin C
+URL|https://www.maybelline.com/face-makeup/foundation-makeup/super-stay-24hr-skin-tint-with-vitamin-c
+METHOD|css_swatch_color
+N|18
+102|FBE1D0|Neutral
+110|FAE0C9|Warm
+112|F7CFB9|Neutral
+118|F5D4B8|Warm
+120|F0C8AC|Neutral
+129|E3B198|Neutral
+130|E9B094|Cool
+220|DFB189|Warm
+310|E7B68D|Cool
+312|E0AA78|Warm
+322|E9B085|Neutral
+330|DFA575|
+338|CB8E64|Cool
+355|BF7A4A|
+368|A26843|
+372|87553E|
+374|4E2B1D|Cool
+375|593428|

@@ -1,0 +1,45 @@
+BRAND|L'Oreal Paris
+PRODUCT|Infallible 32H Fresh Wear Foundation
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/infallible-32-hour-fresh-wear-foundation-lightweight
+METHOD|css_swatch_color
+N|40
+545 - foundation ebony|321D24
+540 - mahogany|411A18
+535 - espresso|451F1B
+530 - deep amber|813205
+525 - deep golden|8F3804
+520 - sienna|93401F
+515 - copper|A04B1F
+511 - maple|B0632F
+510 - hazelnut|C06C30
+505 - toffee|C77E53
+500 - honey bisque|D9914F
+495 - amber|CB8B63
+490 - golden amber|D28F63
+488 - caramel|D68C52
+487 - warm almond|CF8F57
+486 - toasted almond|E0A361
+485 - golden sun|D59562
+482 - radiant sun|D6A373
+481 - cool sand|F0AD82
+480 - radiant sand|DC9D6B
+475 - sun beige|DEA468
+470 - radiant honey|D5A179
+465 - sand|DABC83
+460 - golden beige|DFAD8B
+455 - natural buff|E1B395
+450 - rose beige|E1B395
+445 - vanilla|E4B083
+440 - natural rose|E6B890
+430 - ivory buff|E9C19E
+425 - linen|E8C79D
+420 - true beige|E9C5A1
+415 - rose ivory|F0C8B2
+412 - warm ivory|FFDEC7
+411 - beige ivory|F7D9C2
+410 - ivory|FAD2B8
+405 - porcelain|FCE3D2
+400 - pearl|F5D7C3
+395 - rose pearl|FCE3D9
+390 - snow|FCE8D9
+435 - rose vanilla|E6B6A0

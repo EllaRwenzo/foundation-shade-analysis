@@ -1,0 +1,501 @@
+<title>Foundation Shade Inclusivity</title>
+<meta name="description" content="How evenly do 10 beauty brands spread their foundation shades from light to deep? A data project in R by Ella Rwenzo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..750&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400..700;1,400&display=swap">
+<style>
+/* Layout: a color-matching bench. One neutral specimen plate carries every swatch;
+   the page around it stays cool and quiet so the shades read true. Single left-aligned column. */
+:root {
+  --paper: #f1f2f3;       /* page ground: cool neutral, so warm shades read true */
+  --card: #ffffff;
+  --ink: #15171a;
+  --ink-2: #4a4f57;
+  --muted: #737a83;
+  --rule: #d6d9dd;
+  --accent: #2553a0;      /* lab-ink blue: links, focus, the one active state */
+  --accent-soft: #e3eaf6;
+  --plate: #e8e9eb;       /* specimen plate: the same in both themes, like a gray card */
+  --plate-shade: #dedfe2;
+  --plate-ink: #26292d;
+  --plate-muted: #5f656d;
+  --plate-rule: #c3c7cc;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --step-0: 1rem;
+  --step-1: 1.25rem;
+  --step-2: 1.6rem;
+  --step-3: clamp(2.3rem, 5.2vw, 3.7rem);
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #111315; --card: #1a1d20; --ink: #eceef0; --ink-2: #b9bfc6; --muted: #8b929b;
+    --rule: #2c3035; --accent: #8db4f2; --accent-soft: #1d2a3d;
+    --plate: #e8e9eb; --plate-shade: #dedfe2; --plate-ink: #26292d; --plate-muted: #5f656d; --plate-rule: #c3c7cc;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #111315; --card: #1a1d20; --ink: #eceef0; --ink-2: #b9bfc6; --muted: #8b929b;
+  --rule: #2c3035; --accent: #8db4f2; --accent-soft: #1d2a3d;
+  --plate: #e8e9eb; --plate-shade: #dedfe2; --plate-ink: #26292d; --plate-muted: #5f656d; --plate-rule: #c3c7cc;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: var(--step-0); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+[hidden] { display: none !important; }
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.1; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: var(--step-2); font-weight: 650; }
+h3 { font-size: var(--step-1); font-weight: 600; }
+p { margin: 0; }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 44px); padding-block: 48px 72px; display: grid; gap: 64px; }
+.prose { max-width: 66ch; display: grid; gap: 14px; color: var(--ink-2); }
+.prose strong { color: var(--ink); }
+
+/* Masthead */
+.masthead { display: grid; gap: 18px; }
+.masthead h1 { font-size: var(--step-3); font-weight: 720; letter-spacing: -0.025em; max-width: 16ch; }
+.deck { font-size: 1.15rem; line-height: 1.55; color: var(--ink-2); max-width: 60ch; }
+.byline { color: var(--muted); font-size: 0.92rem; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+.links a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+.links a:hover { border-color: var(--accent); }
+
+/* Stat chips: each card is a color chip, like a printed swatch card */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.chipcard { background: var(--card); border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-rows: auto 1fr auto; }
+.chipcard .swatch { height: 64px; }
+.chipcard .body { padding: 16px 18px 10px; display: grid; gap: 6px; align-content: start; }
+.chipcard .num { font-family: var(--display); font-size: 2.5rem; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+.chipcard .what { color: var(--ink-2); font-size: 0.95rem; line-height: 1.45; }
+.chipcard .code { padding: 8px 18px 12px; font-family: var(--mono); font-size: 0.72rem; color: var(--muted); border-top: 1px dashed var(--rule); overflow-wrap: anywhere; }
+
+/* Explorer */
+.section-head { display: grid; gap: 10px; margin-bottom: 20px; }
+.section-head p { color: var(--ink-2); max-width: 66ch; }
+.explorer { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: clamp(12px, 2.4vw, 22px); display: grid; gap: 14px; }
+.readout { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 14px; align-items: center; min-height: 64px; }
+.readout .chip { width: 56px; height: 56px; border-radius: 8px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12); }
+.readout .name { font-weight: 700; font-size: 1.05rem; line-height: 1.3; }
+.readout .meta { color: var(--ink-2); font-size: 0.9rem; line-height: 1.35; }
+.readout .vals { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 4px; font-size: 0.85rem; color: var(--ink-2); }
+.pill { display: inline-block; padding: 1px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--ink); font-size: 0.78rem; font-weight: 600; font-family: var(--body); }
+
+.plate { background: var(--plate); color: var(--plate-ink); border-radius: 10px; padding: 12px 14px 10px; }
+.grid-row { display: grid; grid-template-columns: minmax(130px, 200px) minmax(0, 1fr) 62px; gap: 10px; align-items: center; }
+.head-row { margin-bottom: 4px; }
+.head-row .bands { position: relative; height: 18px; }
+.head-row .bands span, .axis-row .ticks span { position: absolute; transform: translateX(-50%); font-size: 0.72rem; color: var(--plate-muted); white-space: nowrap; }
+.head-row .bands span { font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.col-label { font-size: 0.72rem; color: var(--plate-muted); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.col-value { text-align: right; }
+.row { padding-block: 3px; }
+.row + .row, .subrows + .row { border-top: 1px solid var(--plate-rule); }
+.row-label { font: inherit; color: var(--plate-ink); background: none; border: 0; padding: 4px 0; text-align: left; display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.92rem; cursor: pointer; min-width: 0; }
+.row-label .chev { width: 8px; height: 8px; border-right: 2px solid var(--plate-muted); border-bottom: 2px solid var(--plate-muted); transform: rotate(-45deg); transition: transform .15s ease; flex: none; }
+.row-label[aria-expanded="true"] .chev { transform: rotate(45deg); }
+.row-label:hover { text-decoration: underline; text-underline-offset: 3px; }
+.row-label.static { cursor: default; font-weight: 500; }
+.row-label.static:hover { text-decoration: none; }
+.row-value { text-align: right; font-family: var(--mono); font-size: 0.85rem; color: var(--plate-ink); }
+.track { position: relative; height: 30px; cursor: crosshair; touch-action: pan-y; }
+.track .half { position: absolute; top: 0; bottom: 0; left: 45%; right: 0; background: var(--plate-shade); border-radius: 3px; }
+.track .bl { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--plate-rule); }
+.mark { position: absolute; top: 3px; bottom: 3px; width: 2px; margin-left: -1px; border-radius: 1px; }
+.mark.on { width: 5px; margin-left: -2.5px; top: 0; bottom: 0; box-shadow: 0 0 0 2px var(--plate), 0 0 0 3.5px var(--plate-ink); z-index: 2; }
+.subrows .row-label { font-weight: 500; font-size: 0.82rem; padding-left: 16px; }
+.subrows .track { height: 20px; }
+.subrows .row-value { font-size: 0.78rem; color: var(--plate-muted); }
+.monk-row .track { height: 26px; }
+.monk-row .mark { top: 50%; bottom: auto; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; box-shadow: 0 0 0 2px var(--plate); }
+.monk-row .mark.on { width: 18px; height: 18px; margin: -9px 0 0 -9px; box-shadow: 0 0 0 2px var(--plate), 0 0 0 3.5px var(--plate-ink); }
+.monk-row .row-label { font-weight: 500; font-size: 0.82rem; }
+.axis-row .ticks { position: relative; height: 18px; margin-top: 6px; }
+.axis-row .ticks span { font-family: var(--mono); }
+.axis-caption { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--plate-muted); }
+.explorer-foot { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; }
+.explorer-foot p { color: var(--muted); font-size: 0.85rem; }
+.btn { font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--ink); background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+th, td { padding: 8px 12px; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td { font-variant-numeric: tabular-nums; }
+tbody tr:last-child td { border-bottom: 0; }
+
+/* Findings */
+.findings { display: grid; gap: 40px; }
+.fig { margin: 0; display: grid; gap: 12px; }
+.fig img { border-radius: 10px; border: 1px solid var(--rule); background: #fcfcfb; }
+.fig figcaption { max-width: 70ch; color: var(--ink-2); font-size: 0.97rem; }
+.fig figcaption strong { color: var(--ink); }
+details.wall { border: 1px solid var(--rule); border-radius: 10px; background: var(--card); padding: 14px 18px; }
+details.wall summary { cursor: pointer; font-weight: 600; }
+details.wall img { margin-top: 14px; }
+.shows { display: grid; gap: 12px; padding: 0; margin: 0; list-style: none; max-width: 72ch; }
+.shows li { display: grid; grid-template-columns: 12px minmax(0, 1fr); gap: 12px; color: var(--ink-2); }
+.shows li::before { content: ""; width: 12px; height: 12px; border-radius: 3px; margin-top: 7px; background: var(--dot); }
+.shows strong { color: var(--ink); }
+
+/* Method */
+.pipeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-block: 8px 6px; }
+.stage { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; display: grid; gap: 6px; align-content: start; position: relative; }
+.stage .v { font-family: var(--mono); font-size: 0.95rem; overflow-wrap: anywhere; }
+.stage .sw { height: 34px; border-radius: 6px; }
+.stage:not(:last-child)::after { content: "→"; position: absolute; right: -10px; top: 50%; transform: translate(50%, -50%); color: var(--muted); font-size: 1rem; z-index: 1; background: var(--paper); line-height: 1; padding: 2px 0; }
+.formula { font-family: var(--mono); font-size: 0.9rem; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; overflow-x: auto; white-space: nowrap; color: var(--ink); display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: baseline; }
+.formula .fnote { font-family: var(--body); font-size: 0.82rem; color: var(--muted); white-space: normal; }
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.two-col > div { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.plain { margin: 0; padding-left: 1.1em; display: grid; gap: 10px; color: var(--ink-2); }
+.plain strong { color: var(--ink); }
+footer { border-top: 1px solid var(--rule); padding-top: 22px; display: grid; gap: 10px; color: var(--muted); font-size: 0.85rem; }
+footer p { max-width: 90ch; }
+
+@media (max-width: 760px) {
+  .pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stage:not(:last-child)::after { display: none; }
+  .two-col { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .formula { grid-template-columns: minmax(0, 1fr); }
+  .grid-row { grid-template-columns: minmax(0, 1fr) 48px; gap: 2px 8px; }
+  .grid-row > .row-label, .grid-row > .col-label.brand-col { grid-column: 1 / -1; }
+  .head-row .col-label.brand-col { display: none; }
+  .row-value { align-self: center; }
+  .head-row .bands span { font-size: 0.62rem; letter-spacing: 0.02em; }
+  .axis-row .ticks span:nth-child(even) { display: none; }
+  .axis-row .spacer { display: none; }
+  .axis-row .axis-body { grid-column: 1; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<!--BODY-->
+<div class="wrap">
+  <header class="masthead">
+    <p class="label">Data science project · R and ggplot2</p>
+    <h1>Foundation Shade Inclusivity</h1>
+    <p class="deck">How evenly do ten beauty brands spread their foundation shades from light to deep? I collected all {{N_SHADES}} shades of {{N_PRODUCTS}} foundation products from the brands' own websites, turned every swatch into a lightness score, and measured how the shades are spread and spaced.</p>
+    <p class="byline">Ella Rwenzo · B.S. Data Science, Rutgers University · Data collected September 28, 2026</p>
+    <nav class="links" aria-label="Project files">
+      <a href="report.html">Full R report</a>
+      <a href="data/shades_clean.csv">Dataset (CSV)</a>
+      <a id="repo-link" href="{{REPO_URL}}">Code on GitHub</a>
+    </nav>
+  </header>
+
+  <section class="stats" aria-label="Key numbers">
+    <article class="chipcard">
+      <div class="swatch" style="background: {{CHIP_LIGHT}}"></div>
+      <div class="body"><p class="num">{{N_SHADES}}</p><p class="what">shades from {{N_PRODUCTS}} products and {{N_BRANDS}} brands, read from each official product page</p></div>
+      <p class="code">Light band · {{CAP_LIGHT}}</p>
+    </article>
+    <article class="chipcard">
+      <div class="swatch" style="background: {{CHIP_MEDIUM}}"></div>
+      <div class="body"><p class="num">{{SHARE_DEEPER}}</p><p class="what">of shades sit in the deeper half of the lightness scale. An even spread would be 50%.</p></div>
+      <p class="code">Medium band · {{CAP_MEDIUM}}</p>
+    </article>
+    <article class="chipcard">
+      <div class="swatch" style="background: {{CHIP_TAN}}"></div>
+      <div class="body"><p class="num">{{SHARE_DEEP}}</p><p class="what">are in the Deep band (L* below 35), where Monk skin tones 8 to 10 sit</p></div>
+      <p class="code">Tan band · {{CAP_TAN}}</p>
+    </article>
+    <article class="chipcard">
+      <div class="swatch" style="background: {{CHIP_DEEP}}"></div>
+      <div class="body"><p class="num">{{GAP_RATIO}}×</p><p class="what">wider gaps between neighboring deep shades than light ones, in {{N_WIDER}} of {{N_TESTED}} products</p></div>
+      <p class="code">Deep band · {{CAP_DEEP}}</p>
+    </article>
+  </section>
+
+  <section aria-labelledby="explorer-title">
+    <div class="section-head">
+      <h2 id="explorer-title">Every shade, lightest to deepest</h2>
+      <p>Each line is one shade, drawn in its swatch color. Solid blocks mean shades are packed close together. Hover, tap or arrow through a row to read a shade, and select a brand to open its products.</p>
+    </div>
+    <div class="explorer">
+      <div class="readout" id="readout" aria-live="polite">
+        <div class="chip" id="ro-chip"></div>
+        <div>
+          <p class="name" id="ro-name"></p>
+          <p class="meta" id="ro-meta"></p>
+          <p class="vals"><span class="mono" id="ro-hex"></span><span class="mono" id="ro-l"></span><span class="pill" id="ro-band"></span></p>
+        </div>
+      </div>
+      <div class="plate" id="plate">
+        <div class="grid-row head-row">
+          <span class="col-label brand-col">Brand</span>
+          <div class="bands" aria-hidden="true"><span style="left:12.5%">Light</span><span style="left:35%">Medium</span><span style="left:55%">Tan</span><span style="left:82.5%">Deep</span></div>
+          <span class="col-label col-value">Deeper half</span>
+        </div>
+        <div id="rows"></div>
+        <div class="grid-row axis-row" aria-hidden="true">
+          <span class="spacer"></span>
+          <div class="axis-body">
+            <div class="ticks" id="ticks"></div>
+            <div class="axis-caption"><span>lighter</span><span>Lightness, L*</span><span>deeper</span></div>
+          </div>
+          <span class="spacer"></span>
+        </div>
+      </div>
+      <div class="explorer-foot">
+        <p>Shaded area: the deeper half of the scale (L* below 55). Lines mark the Light, Medium, Tan and Deep bands.</p>
+        <button class="btn" id="table-toggle" type="button" aria-expanded="false" aria-controls="table-view">View as table</button>
+      </div>
+      <div id="table-view" hidden>
+        <div class="table-wrap">
+          <table>
+            <caption class="label" style="text-align:left; padding: 10px 12px 0;">Lightness summary by brand (L* from 0 = black to 100 = white)</caption>
+            <thead><tr><th scope="col">Brand</th><th scope="col">Products</th><th scope="col">Shades</th><th scope="col">Lightest</th><th scope="col">Deepest</th><th scope="col">Deep band</th><th scope="col">Deeper half</th><th scope="col">Gap, light half</th><th scope="col">Gap, deep half</th></tr></thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="findings" aria-labelledby="findings-title">
+    <div class="section-head" style="margin-bottom:0">
+      <h2 id="findings-title">What the data shows</h2>
+    </div>
+    <ul class="shows">
+      <li style="--dot: {{CHIP_LIGHT}}"><span><strong>Every brand reaches the deep end, but not equally far.</strong> Each brand's deepest shade lands in the Deep band. It ranges from L* {{DEEPEST_L}} ({{DEEPEST_BRAND}}) to L* {{SHALLOW_L}} ({{SHALLOW_BRAND}}).</span></li>
+      <li style="--dot: {{CHIP_MEDIUM}}"><span><strong>Most shades are light.</strong> {{SHARE_LIGHTER}} of all shades are in the lighter half of the scale. The share in the deeper half runs from {{LOW_SHARE}} ({{LOW_BRAND}}) to {{TOP_SHARE}} ({{TOP_BRAND}}), and no brand reaches 50%.</span></li>
+      <li style="--dot: {{CHIP_TAN}}"><span><strong>The pattern repeats inside each product.</strong> In {{N_UNBALANCED}} of {{N_PRODUCTS}} products, fewer than half the shades sit in the deeper half of that product's own range. The typical product puts {{MEDIAN_OWN_HALF}} there.</span></li>
+      <li style="--dot: {{CHIP_DEEP}}"><span><strong>Deep shades are spaced further apart.</strong> The typical gap between neighboring shades is {{GAP_LIGHT}} lightness points in a product's lighter half and {{GAP_DEEP}} in its deeper half. That held in {{N_WIDER}} of {{N_TESTED}} products (Wilcoxon signed-rank test, p &lt; 0.001).</span></li>
+    </ul>
+
+    <figure class="fig">
+      <img src="charts/04_depth_bands_by_brand.png" width="2000" height="1200" alt="Stacked bars for ten brands showing the share of shades in the Light, Medium, Tan and Deep bands. NYX has the largest deeper-half share at 49 percent and Charlotte Tilbury the smallest at 23 percent; no brand reaches 50 percent.">
+      <figcaption><strong>No brand puts half of its shades in the deeper half of the scale.</strong> Light and Medium together take up more than half of every brand's range. The right-hand columns give each brand's Deep share and its Tan + Deep share.</figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="charts/05_spacing_light_vs_deep.png" width="2000" height="1200" alt="Dumbbell chart of the typical gap between neighboring shades in the lighter and deeper half of each brand's products. For every brand the deeper-half gap is larger, from about 1.9 for e.l.f. to 6.7 for Maybelline.">
+      <figcaption><strong>Deep shades are spaced further apart for every brand.</strong> A bigger gap means a customer is more likely to land between two shades with no close match. Maybelline shows the largest difference and e.l.f. the smallest.</figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="charts/06_shade_count_vs_balance.png" width="2000" height="1200" alt="Scatter plot of number of shades against the share of shades in the deeper half for 46 products. The {{N_BIG}} products with 40 or more shades are highlighted and range from {{BIG_MIN}} to {{BIG_MAX}}.">
+      <figcaption><strong>A bigger shade range is not a more balanced one.</strong> The {{N_BIG}} largest ranges (40 or more shades) put only {{BIG_MIN}} to {{BIG_MAX}} of their shades in the deeper half. Across all products the link between size and balance is weak (Spearman ρ = {{SPEARMAN_RHO}}, p = {{SPEARMAN_P}}).</figcaption>
+    </figure>
+    <details class="wall">
+      <summary>See every product, shade by shade</summary>
+      <img src="charts/07_shade_wall_all_products.png" width="2200" height="3200" alt="Dot chart with one row per product, 46 rows, each dot a shade in its swatch color placed by lightness.">
+    </details>
+  </section>
+
+  <section aria-labelledby="method-title" style="display:grid; gap:18px">
+    <div class="section-head" style="margin-bottom:0">
+      <h2 id="method-title">How it works</h2>
+      <p>One swatch, followed all the way through: {{EX_NAME}}.</p>
+    </div>
+    <div class="pipeline" role="list">
+      <div class="stage" role="listitem"><span class="label">Swatch</span><div class="sw" style="background: {{EX_HEX}}"></div></div>
+      <div class="stage" role="listitem"><span class="label">HEX</span><span class="v">{{EX_HEX}}</span></div>
+      <div class="stage" role="listitem"><span class="label">R · G · B</span><span class="v">{{EX_R}} · {{EX_G}} · {{EX_B}}</span></div>
+      <div class="stage" role="listitem"><span class="label">Lightness</span><span class="v">L* {{EX_L}}</span></div>
+      <div class="stage" role="listitem"><span class="label">Band</span><span class="v">{{EX_BAND}}</span></div>
+    </div>
+    <div class="prose">
+      <p><strong>Collecting.</strong> For each brand I took every foundation, skin tint, CC cream and glow filter in the Foundation section of its US website, and every shade listed, including sold-out ones. Seven brands paint their swatches with a color code, which I recorded exactly. Charlotte Tilbury, Rare Beauty and Makeup by Mario use small photos, so I averaged the middle of each photo after dropping the brightest and darkest quarter of pixels. Three products the brands are clearing out were left out.</p>
+      <p><strong>Measuring lightness.</strong> CIELAB L* is the standard measure of how light a color looks, from 0 (black) to 100 (white). It weights green light more than blue, the way our eyes do:</p>
+    </div>
+    <p class="formula"><span>Y = 0.2126·R + 0.7152·G + 0.0722·B</span><span class="fnote">brightness, after R, G and B are converted to linear light</span><span>L* = 116 · Y<sup>1/3</sup> − 16</span><span class="fnote">lightness on a 0–100 scale</span></p>
+    <div class="prose">
+      <p><strong>Bands.</strong> I split L* 15 to 95 into four equal 20-point bands: Light (75+), Medium (55–75), Tan (35–55) and Deep (below 35). That span matches the ten tones of the Monk Skin Tone Scale, shown as the last row of the chart above.</p>
+      <p><strong>Testing.</strong> For each product I compared the typical gap between neighboring shades in its lighter half and its deeper half. The Wilcoxon signed-rank test fits this kind of paired, skewed data. Everything is in R: dplyr for cleaning, farver to check the color math, and ggplot2 for the charts.</p>
+    </div>
+  </section>
+
+  <section class="two-col" aria-label="Interpretation and limits">
+    <div>
+      <h3>What it might mean</h3>
+      <ul class="plain">
+        <li>A person with deep skin has fewer shades to choose from <strong>and</strong> bigger jumps between them, so the closest shade is more likely to be a visible mismatch.</li>
+        <li>A long shade list on the box is not enough to judge inclusivity. How the shades are spaced matters as much as how many there are.</li>
+        <li>Brands may be placing shades where they expect the most sales. This data shows how shades are spread, not why.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Limits of this data</h3>
+      <ul class="plain">
+        <li><strong>Screen colors, not makeup.</strong> Swatches are digital images, and brands don't calibrate them against each other. Comparisons inside a brand are more reliable than between brands.</li>
+        <li><strong>Swatches are approximate.</strong> {{N_REPEATED}} pairs of shades share one swatch color, and in {{N_ORDER_FLAGS}} spots a higher-numbered shade has a clearly lighter swatch than the one before it.</li>
+        <li><strong>Lightness only.</strong> Undertone matters too. The a* and b* values are saved for a follow-up.</li>
+        <li><strong>One day, ten brands.</strong> Lineups change, and these brands are not a random sample of the market.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Sources.</strong> Official US product pages of e.l.f., Maybelline, Huda Beauty, Charlotte Tilbury, Hourglass, L'Oréal Paris, Laura Mercier, NYX Professional Makeup, Rare Beauty and Makeup by Mario, collected September 28, 2026. Monk Skin Tone Scale by Dr. Ellis Monk and Google (skintone.google), CC BY 4.0.</p>
+    <p>Built with R (dplyr, tidyr, ggplot2, farver, R Markdown). Chart text and numbers come straight from the R report.</p>
+  </footer>
+</div>
+
+<script>
+const DATA = {{DATA_JSON}};
+(function () {
+  const rowsEl = document.getElementById("rows");
+  const ro = { chip: document.getElementById("ro-chip"), name: document.getElementById("ro-name"), meta: document.getElementById("ro-meta"),
+               hex: document.getElementById("ro-hex"), l: document.getElementById("ro-l"), band: document.getElementById("ro-band") };
+  const bandOf = L => L >= 75 ? "Light" : L >= 55 ? "Medium" : L >= 35 ? "Tan" : "Deep";
+  const pct = x => Math.round(x * 100) + "%";
+  let active = null; // { mark }
+
+  function show(item) {
+    ro.chip.style.background = item.hex;
+    ro.name.textContent = item.name;
+    ro.meta.textContent = item.meta;
+    ro.hex.textContent = item.hex;
+    ro.l.textContent = "L* " + item.L.toFixed(1);
+    ro.band.textContent = item.band ? item.band : bandOf(item.L) + " band";
+  }
+
+  function makeTrack(items, label, extraClass) {
+    const track = document.createElement("div");
+    track.className = "track";
+    track.tabIndex = 0;
+    track.setAttribute("role", "group");
+    track.setAttribute("aria-label", label + ", " + items.length + (items.length === 1 ? " shade" : " shades") + ". Use the left and right arrow keys to read each one.");
+    track.innerHTML = '<span class="half"></span><span class="bl" style="left:25%"></span><span class="bl" style="left:45%"></span><span class="bl" style="left:65%"></span>';
+    const sorted = items.slice().sort((a, b) => b.L - a.L);
+    const marks = sorted.map(it => {
+      const m = document.createElement("span");
+      m.className = "mark";
+      m.style.left = (100 - it.L) + "%";
+      m.style.background = it.hex;
+      track.appendChild(m);
+      return m;
+    });
+    let cur = -1;
+    function select(i) {
+      if (active && active.mark) active.mark.classList.remove("on");
+      cur = i;
+      marks[i].classList.add("on");
+      active = { mark: marks[i] };
+      show(sorted[i]);
+    }
+    function nearest(clientX) {
+      const r = track.getBoundingClientRect();
+      const L = 100 - ((clientX - r.left) / r.width) * 100;
+      let best = 0, bd = Infinity;
+      for (let i = 0; i < sorted.length; i++) { const d = Math.abs(sorted[i].L - L); if (d < bd) { bd = d; best = i; } }
+      return best;
+    }
+    track.addEventListener("pointermove", e => select(nearest(e.clientX)));
+    track.addEventListener("pointerdown", e => select(nearest(e.clientX)));
+    track.addEventListener("focus", () => { if (cur < 0) select(0); else select(cur); });
+    track.addEventListener("keydown", e => {
+      if (e.key === "ArrowRight") { e.preventDefault(); select(Math.min(sorted.length - 1, cur + 1)); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); select(Math.max(0, cur < 0 ? 0 : cur - 1)); }
+      else if (e.key === "Home") { e.preventDefault(); select(0); }
+      else if (e.key === "End") { e.preventDefault(); select(sorted.length - 1); }
+    });
+    return { track, marks, sorted, select };
+  }
+
+  function row(labelNode, track, valueText, cls) {
+    const r = document.createElement("div");
+    r.className = "grid-row row" + (cls ? " " + cls : "");
+    const v = document.createElement("span");
+    v.className = "row-value";
+    v.textContent = valueText;
+    r.append(labelNode, track, v);
+    return r;
+  }
+
+  const byProduct = DATA.products.map(() => []);
+  DATA.shades.forEach(([p, name, hex, L]) => byProduct[p].push({ p, name, hex, L }));
+  const tracksByShade = new Map();
+
+  DATA.brands.forEach((b, bi) => {
+    const pIdx = DATA.products.map((p, i) => [p, i]).filter(([p]) => p.brand === bi);
+    const items = [];
+    pIdx.forEach(([p, i]) => byProduct[i].forEach(s => items.push({ name: s.name, hex: s.hex, L: s.L, meta: p.name + " · " + b.name })));
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "row-label";
+    btn.setAttribute("aria-expanded", "false");
+    const chev = document.createElement("span"); chev.className = "chev"; chev.setAttribute("aria-hidden", "true");
+    const txt = document.createElement("span"); txt.textContent = b.name;
+    btn.append(chev, txt);
+    const t = makeTrack(items, b.name);
+    rowsEl.append(row(btn, t.track, pct(b.deeper), "brand-row"));
+    const sub = document.createElement("div");
+    sub.className = "subrows";
+    sub.hidden = true;
+    pIdx.forEach(([p, i]) => {
+      const lab = document.createElement("span");
+      lab.className = "row-label static";
+      lab.textContent = p.name;
+      const pt = makeTrack(byProduct[i].map(s => ({ name: s.name, hex: s.hex, L: s.L, meta: p.name + " · " + b.name })), p.name + " by " + b.name);
+      sub.append(row(lab, pt.track, pct(p.deeper)));
+    });
+    rowsEl.append(sub);
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      txt.textContent = b.name;
+      sub.hidden = open;
+    });
+  });
+
+  // Reference row: the ten Monk Skin Tone Scale colors
+  const monkLabel = document.createElement("span");
+  monkLabel.className = "row-label static";
+  monkLabel.textContent = "Monk skin tones 1–10";
+  const mt = makeTrack(DATA.monk.map(([tone, hex, L]) => ({ name: "Monk skin tone " + tone, hex, L, meta: "Monk Skin Tone Scale reference color (Google)", band: bandOf(L) + " band" })), "Monk Skin Tone Scale reference");
+  rowsEl.append(row(monkLabel, mt.track, "", "monk-row"));
+
+  // Axis ticks
+  const ticks = document.getElementById("ticks");
+  for (let v = 100; v >= 0; v -= 10) {
+    const s = document.createElement("span");
+    s.style.left = (100 - v) + "%";
+    s.textContent = v;
+    ticks.appendChild(s);
+  }
+
+  // Start with a real shade selected so the readout is never empty
+  const d = DATA.shades[DATA.defaultShade];
+  const dp = DATA.products[d[0]];
+  const firstBrandTrack = [...rowsEl.querySelectorAll(".brand-row .track")][dp.brand];
+  show({ name: d[1], hex: d[2], L: d[3], meta: dp.name + " · " + DATA.brands[dp.brand].name });
+  if (firstBrandTrack) {
+    const marks = [...firstBrandTrack.querySelectorAll(".mark")];
+    const target = marks.find(m => m.style.left === (100 - d[3]) + "%" && m.style.background);
+    if (target) { target.classList.add("on"); active = { mark: target }; }
+  }
+
+  // Table view
+  const tbody = document.getElementById("table-body");
+  DATA.brands.forEach(b => {
+    const tr = document.createElement("tr");
+    [b.name, b.products, b.n, b.lightest.toFixed(1), b.deepest.toFixed(1), pct(b.deep), pct(b.deeper), b.gapLight.toFixed(1), b.gapDeep.toFixed(1)]
+      .forEach((v, i) => { const c = document.createElement(i === 0 ? "th" : "td"); if (i === 0) c.scope = "row"; c.textContent = v; tr.appendChild(c); });
+    tbody.appendChild(tr);
+  });
+  const tt = document.getElementById("table-toggle");
+  const tv = document.getElementById("table-view");
+  tt.addEventListener("click", () => {
+    const open = tt.getAttribute("aria-expanded") === "true";
+    tt.setAttribute("aria-expanded", String(!open));
+    tt.textContent = open ? "View as table" : "Hide table";
+    tv.hidden = open;
+  });
+
+  // Hide the GitHub link until a repo link is filled in
+  const repo = document.getElementById("repo-link");
+  if (!repo.getAttribute("href")) repo.hidden = true;
+})();
+</script>

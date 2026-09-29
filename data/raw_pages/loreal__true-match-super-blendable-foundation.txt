@@ -1,0 +1,52 @@
+BRAND|L'Oreal Paris
+PRODUCT|True Match Super-Blendable Foundation
+URL|https://www.lorealparisusa.com/makeup/face/foundation-makeup/true-match-super-blendable-makeup
+METHOD|css_swatch_color
+N|47
+c12, deep|280F11
+c11, deep|3E1915
+c10, deep|521F0A
+c9.5, deep|663017
+n11, deep|4C270E
+n10, deep|703912
+n9, medium deep|894004
+w9.5, deep|975627
+c9, deep|823D16
+n8, medium deep|984A0B
+c8, medium deep|8B4826
+w10, deep|763B05
+c7, medium deep|C1714B
+c6, medium|B66637
+w9, medium deep|AC6B38
+w8, medium deep|BD7546
+n6.5, medium deep|D38045
+n6, medium|CF9163
+w5.5, medium|DC9566
+w7, medium deep|CF8E52
+n7, medium deep|C68251
+n4, light medium|E3AB8A
+w5, medium|EBB081
+c4, light medium|EBB094
+w4.5, light medium|E9A86E
+n5.5, medium|CF9463
+n5, medium|DC9F79
+n3, light medium|EBBD97
+w6, medium|DB9973
+w4, light medium|E3B186
+c3, light medium|EBB6A2
+c5, medium|DEA38F
+c2.5, light medium|EDBAA3
+w3, light medium|F0C0A0
+c1.5, light|FACCBD
+c2, light|F7D4C4
+n2, light|F5D4BB
+w2.5, light medium|F0CDAA
+c1, light|FCD4C4
+n0.5, light|FCE3CC
+c0.5, light|FCDED1
+w2, light|F7D4B3
+w1, light|FADEC7
+w0.5, light|FCE6D4
+w6.5, medium|DEAC72
+w10.5, deep|522B14
+n1, light|F5D4B9
